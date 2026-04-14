@@ -1,0 +1,13 @@
+# Ignore the massive dependencies folder
+node_modules/
+
+# Ignore your secret keys and database URLs
+.env
+
+# Ignore logs
+logs/
+*.log
+npm-debug.log*
+
+# Ignore OS specific files
+.DS_Store
