@@ -35,7 +35,7 @@ app.use("/api/v1/job",jobRoutes);
 app.use("/api/v1/application",applicationRoutes)
 
 app.get("/health",(req,res)=>{
-    res.json({msg:ok})
+    res.status(200).send("Ok")
 })
 
 app.listen(port,
