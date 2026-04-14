@@ -20,7 +20,9 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
     origin: 'https://jobportal-by-sumit.netlify.app/', // Must match your React URL exactly
-    credentials: true                // Allows the browser to store the cookie
+    credentials: true   ,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']             // Allows the browser to store the cookie
 }))
 app.set("json spaces",2)
 app.use(cookieParser())
