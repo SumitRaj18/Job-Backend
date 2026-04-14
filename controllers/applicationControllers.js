@@ -82,7 +82,7 @@ export const getAppliedJobs= async (req,res) => {
         })
 
         if (!applications) {
-            return res.status(404).json({
+            return res.status(200).json({
                 success:false,
                 message:"No jobs applied"
             })
