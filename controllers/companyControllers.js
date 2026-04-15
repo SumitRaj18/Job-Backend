@@ -143,7 +143,7 @@ export const companyUpdate = async (req, res) => {
         // REDIS: Invalidate cache
         await redis.del(`company:${req.user}`);
         await redis.del(`company_details:${companyId}`);
-
+        await redis.del(`jobs_admin:${req.user}`)
         res.status(200).json({
             success: true,
             message: "Company Updated",
