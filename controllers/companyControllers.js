@@ -79,7 +79,7 @@ export const getCompany= async(req,res) =>{
          const responseData= {
             success:true,message:'ok',company:company
          }
-         await redis.set(cachedKey,JSON.stringify(responseData))
+         await redis.set(cachedKey,JSON.stringify(responseData),"EX",3600)
         return res.status(200).json(responseData)
     } 
     catch (error) {
