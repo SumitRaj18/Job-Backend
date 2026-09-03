@@ -8,11 +8,8 @@ import companyRoutes from "./routes/companyRoute.js"
 import jobRoutes from "./routes/jobRoute.js"
 import applicationRoutes from './routes/applicationRoute.js'
 import cors from 'cors'
-<<<<<<< HEAD
 import redis from "./utils/redis.js"
-=======
 
->>>>>>> 800445ffa9afb4283275928928ebdd015a61c978
 // INSTANCE OF EXPRESS
 const app = express()
 //PORT
@@ -40,7 +37,6 @@ app.use("/api/v1/job",jobRoutes);
 
 app.use("/api/v1/application",applicationRoutes)
 
-<<<<<<< HEAD
 app.get("/health", async (req, res) => {
   try {
     await redis.set("heartbeat", Date.now().toString());
@@ -55,11 +51,9 @@ app.get("/health", async (req, res) => {
  
 
 
-=======
 app.get("/health",(req,res)=>{
     res.status(200).send("Ok")
 })
->>>>>>> 800445ffa9afb4283275928928ebdd015a61c978
 
 app.listen(port,
     ()=>console.log(chalk.yellow(`Server running at http://localhost:${port}`)))
